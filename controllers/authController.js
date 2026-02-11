@@ -32,13 +32,13 @@ const SignUp = (async (req, res) => {
         await newUser.save();
 
         //send a response to the user
-        res.send({
+        res.status(201).send({
             message: 'account created successfully',
             success: true
         })
 
     } catch (error) {
-        res.send({
+        res.status(400).send({
             message: error.message,
             success: false
         })
@@ -90,7 +90,7 @@ const LogIn = (async (req, res) => {
 
 
     } catch (error) {
-        res.send({
+        res.status(400).send({
             message: error.message,
             success: false
         })

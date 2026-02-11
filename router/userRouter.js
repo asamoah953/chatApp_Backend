@@ -10,6 +10,7 @@ const router = express.Router();
 
 
 router.get('/get-user-logged-in', middleware, userController.user_logged_in);
+router.get('/get-all_users', middleware, userController.fetch_all_users);
 
 
 
