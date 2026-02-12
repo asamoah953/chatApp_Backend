@@ -17,7 +17,7 @@ module.exports = (req, res, next) => {
         //attach the body of the request with the user id
         let userId = decodedToken.userId;
 
-        req.body = userId;
+        req.body.userId = userId;
 
         //call the next method to forward the user request
         next();
